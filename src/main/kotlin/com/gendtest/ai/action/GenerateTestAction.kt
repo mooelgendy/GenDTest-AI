@@ -1,4 +1,4 @@
-package com.gendtestai.action
+package com.gendtest.ai.action
 
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
@@ -12,10 +12,10 @@ import com.intellij.openapi.vfs.VfsUtil
 import com.intellij.psi.PsiClass
 import com.intellij.psi.PsiJavaFile
 import com.intellij.psi.PsiManager
-import com.gendtestai.service.LowMemoryException
-import com.gendtestai.service.OllamaService
-import com.gendtestai.service.TestGenerator
-import com.gendtestai.ui.TestConfigDialog
+import com.gendtest.ai.service.LowMemoryException
+import com.gendtest.ai.service.OllamaService
+import com.gendtest.ai.service.TestGenerator
+import com.gendtest.ai.ui.TestConfigDialog
 import java.nio.charset.StandardCharsets
 
 class GenerateTestAction : AnAction("Generate Tests with GenDTest AI") {

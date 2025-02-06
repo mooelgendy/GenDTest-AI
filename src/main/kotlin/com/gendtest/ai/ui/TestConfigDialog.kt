@@ -1,9 +1,9 @@
-package com.gendtestai.ui
+package com.gendtest.ai.ui
 
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.DialogWrapper
-import com.gendtestai.core.model.TestConfig
-import com.gendtestai.core.model.TestType
+import com.gendtest.ai.model.TestConfig
+import com.gendtest.ai.model.TestType
 import javax.swing.JComponent
 import javax.swing.JPanel
 import javax.swing.JRadioButton

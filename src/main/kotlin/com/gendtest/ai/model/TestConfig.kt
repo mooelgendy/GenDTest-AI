@@ -1,4 +1,4 @@
-package com.gendtestai.core.model
+package com.gendtest.ai.model
 
 data class TestConfig(
     val testType: TestType,

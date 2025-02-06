@@ -4,7 +4,7 @@ plugins {
     id("org.jetbrains.kotlin.jvm") version "1.9.23"
 }
 
-group = "com.gendtestai"
+group = "com.gendtest.ai"
 version = "1.0.0"
 
 repositories {

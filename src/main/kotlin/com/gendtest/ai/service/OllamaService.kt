@@ -1,5 +1,6 @@
-package com.gendtestai.service
+package com.gendtest.ai.service
 
+import com.gendtest.ai.exception.OllamaErrorHandler
 import com.google.gson.Gson
 import com.google.gson.annotations.SerializedName
 import com.intellij.openapi.diagnostic.Logger
@@ -68,18 +69,10 @@ class OllamaService {
 
             val response = client.send(httpRequest, HttpResponse.BodyHandlers.ofString())
             val responseBody = parseOllamaResponse(response.body())
-
-            // Check for memory errors in Ollama response
-            if (responseBody.contains("out of memory", ignoreCase = true) ||
-                responseBody.contains("insufficient memory", ignoreCase = true)) {
-                throw LowMemoryException("Ollama needs at least 8GB free RAM")
-            }
             return extractCodeFromResponse(responseBody)
-        } catch (e: LowMemoryException) {
-            showMemoryErrorNotification(e.message ?: "Insufficient system memory")
-            throw e // Re-throw to abort test generation
         } catch (e: Exception) {
             logger.error("Ollama request failed", e)
+            OllamaErrorHandler.handle(e)
             throw RuntimeException("Test generation failed: ${e.message}")
         }
     }
