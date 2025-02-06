@@ -1,0 +1,23 @@
+<idea-plugin>
+    <id>com.gendtestai</id>
+    <name>GenDTest AI</name>
+    <version>1.0</version>
+    <vendor email="http://linkedin.com/in/mooelgendy">Mohamed ElGendy</vendor>
+
+    <actions>
+        <action id="OllamaTestGen"
+                class="com.gendtestai.action.GenerateTestAction"
+                text="Generate Tests with GenDTest AI"
+                description="Generate unit/integration tests using AI">
+            <add-to-group group-id="CodeMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default"
+                               first-keystroke="ctrl shift T"/>
+        </action>
+    </actions>
+    <extensions defaultExtensionNs="com.intellij">
+        <notificationGroup id="OllamaMemoryErrors" displayType="BALLOON"/>
+    </extensions>
+
+    <depends>com.intellij.java</depends>
+    <depends>com.intellij.gradle</depends>
+</idea-plugin>
