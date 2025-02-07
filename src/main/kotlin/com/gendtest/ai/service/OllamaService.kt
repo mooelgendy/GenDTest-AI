@@ -1,8 +1,8 @@
 package com.gendtest.ai.service
 
 import com.gendtest.ai.exception.OllamaErrorHandler
+import com.gendtest.ai.model.OllamaRequest
 import com.google.gson.Gson
-import com.google.gson.annotations.SerializedName
 import com.intellij.openapi.diagnostic.Logger
 import java.net.URI
 import java.net.http.HttpClient
@@ -12,12 +12,6 @@ import com.intellij.notification.NotificationGroupManager
 import com.intellij.notification.NotificationType
 import com.intellij.notification.Notifications
 import com.intellij.openapi.application.ApplicationManager
-
-data class OllamaRequest(
-    @SerializedName("model") val model: String,
-    @SerializedName("prompt") val prompt: String,
-    @SerializedName("stream") val stream: Boolean = false
-)
 
 class OllamaService {
     private val gson = Gson()
@@ -105,5 +99,3 @@ class OllamaService {
         """.trimIndent()
     }
 }
-
-class LowMemoryException(message: String) : RuntimeException(message)

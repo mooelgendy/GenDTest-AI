@@ -3,7 +3,7 @@ package com.gendtest.ai.ui
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.DialogWrapper
 import com.gendtest.ai.model.TestConfig
-import com.gendtest.ai.model.TestType
+import com.gendtest.ai.utils.TestType
 import javax.swing.JComponent
 import javax.swing.JPanel
 import javax.swing.JRadioButton

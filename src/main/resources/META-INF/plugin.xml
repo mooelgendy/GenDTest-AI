@@ -2,12 +2,14 @@
     <id>com.gendtest.ai</id>
     <name>GenDTest AI</name>
     <version>1.0</version>
-    <vendor email="http://linkedin.com/in/mooelgendy">Mohamed ElGendy</vendor>
+    <vendor url="http://linkedin.com/in/mooelgendy">Mohamed ElGendy</vendor>
+    <description>An AI-powered plugin to generate unite and integration tests for software development.</description>
 
     <actions>
         <action id="OllamaTestGen"
                 class="com.gendtest.ai.action.GenerateTestAction"
                 text="Generate Tests with GenDTest AI"
+                icon="/META-INF/pluginIcon.png"
                 description="Generate unit/integration tests using AI">
             <add-to-group group-id="CodeMenu" anchor="last"/>
         </action>
@@ -17,5 +19,4 @@
     </extensions>
 
     <depends>com.intellij.java</depends>
-    <depends>com.intellij.gradle</depends>
 </idea-plugin>

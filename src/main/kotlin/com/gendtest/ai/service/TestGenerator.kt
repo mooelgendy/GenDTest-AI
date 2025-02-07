@@ -1,7 +1,7 @@
 package com.gendtest.ai.service
 
+import com.gendtest.ai.utils.TestType
 import com.intellij.psi.PsiClass
-import com.gendtest.ai.model.TestType
 
 class TestGenerator {
     fun buildPrompt(

@@ -1,12 +1,8 @@
 package com.gendtest.ai.model
 
+import com.gendtest.ai.utils.TestType
+
 data class TestConfig(
     val testType: TestType,
     val scenarios: List<String> = emptyList()
 )
-
-enum class TestType(val displayName: String) {
-    UNIT("Unit Test"),
-    INTEGRATION("Integration Test"),
-    MOCK("Mock Test")
-}

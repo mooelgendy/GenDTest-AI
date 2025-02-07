@@ -1,5 +1,6 @@
 package com.gendtest.ai.action
 
+import com.gendtest.ai.exception.LowMemoryException
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
@@ -12,7 +13,6 @@ import com.intellij.openapi.vfs.VfsUtil
 import com.intellij.psi.PsiClass
 import com.intellij.psi.PsiJavaFile
 import com.intellij.psi.PsiManager
-import com.gendtest.ai.service.LowMemoryException
 import com.gendtest.ai.service.OllamaService
 import com.gendtest.ai.service.TestGenerator
 import com.gendtest.ai.ui.TestConfigDialog
