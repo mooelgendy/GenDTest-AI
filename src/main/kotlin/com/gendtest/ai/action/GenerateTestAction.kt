@@ -31,7 +31,8 @@ class GenerateTestAction : AnAction("Generate Tests with GenDTest AI") {
                 override fun run(indicator: com.intellij.openapi.progress.ProgressIndicator) {
                     try {
                         val config = dialog.getConfig()
-                        val prompt = TestGenerator().buildPrompt(psiClass, config.testType, config.scenarios)
+                        val module = ProjectRootManager.getInstance(project).fileIndex.getModuleForFile(virtualFile)
+                        val prompt = TestGenerator().buildPrompt(psiClass, config.testType, config.scenarios, module!!)
                         val testCode = OllamaService().generateTest(prompt)
 
                         WriteCommandAction.runWriteCommandAction(project) {

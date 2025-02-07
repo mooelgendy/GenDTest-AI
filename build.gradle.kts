@@ -22,16 +22,15 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.23")
     implementation("com.google.code.gson:gson:2.10.1")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0")
 }
 
 tasks {
     compileKotlin {
-        kotlinOptions.jvmTarget = "1.8"
+        kotlinOptions.jvmTarget = "17"
     }
 
     patchPluginXml {
-        sinceBuild.set("173") // Supports IntelliJ 2017.3+ (Java 8+)
+        sinceBuild.set("241")
         untilBuild.set("") // No upper limit, works with future versions
     }
 }
