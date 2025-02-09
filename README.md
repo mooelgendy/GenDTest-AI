@@ -1,7 +1,5 @@
 # 🧪 GenDTest AI - IntelliJ Plugin for Generating Unit & Integration Tests with Ollama LLM
 
-[//]: # ([![JetBrains Plugins]&#40;https://img.shields.io/jetbrains/plugin/v/26479-gendtest-ai.svg&#41;]&#40;https://plugins.jetbrains.com/plugin/26479-gendtest-ai&#41;) ------ [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 ---
 
 ## 📌 Overview
