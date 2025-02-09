@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.gendtest.ai"
-version = "1.0.1"
+version = "1.0.2"
 
 repositories {
     mavenCentral()
@@ -13,7 +13,7 @@ repositories {
 }
 
 intellij {
-    version.set("2024.1.1") // Exact version match
+    version.set("2024.1")
     pluginName.set("GenDTest AI")
     plugins.set(listOf("java", "Kotlin"))
 }
