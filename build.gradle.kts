@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.gendtest.ai"
-version = "1.0.3"
+version = "1.0.0"
 
 repositories {
     mavenCentral()
@@ -13,8 +13,9 @@ repositories {
 }
 
 intellij {
-    version.set("2024.1")
+    version.set("2024.1.1")
     pluginName.set("GenDTest AI")
+    type.set("IU")
     plugins.set(listOf("java", "Kotlin"))
 }
 
@@ -30,7 +31,7 @@ tasks {
     }
 
     patchPluginXml {
-        sinceBuild.set("241")
+        sinceBuild.set("241.15989.150")
         untilBuild.set("") // No upper limit, works with future versions
     }
 }

@@ -4,6 +4,8 @@
 
 **GenDTest AI** is an **AI-powered IntelliJ plugin** that generates **unit and integration tests** for Java **Spring Boot** projects using **Ollama LLM** locally—without relying on cloud services.
 
+🔗 **Download the Plugin:** [GenDTest AI on JetBrains Marketplace](https://plugins.jetbrains.com/plugin/26479-gendtest-ai)
+
 ### 🚀 **Key Features**
 
 ✅ **One-Click Unit & Integration Test Generation** for Java Spring Boot applications.\
