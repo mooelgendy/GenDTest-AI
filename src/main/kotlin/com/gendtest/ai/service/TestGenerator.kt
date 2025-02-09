@@ -13,22 +13,23 @@ class TestGenerator {
         module: Module
     ): String {
         val javaVersion = getProjectJavaVersion(module)
-        val methods = psiClass.methods.joinToString("\n") { method ->
-            val params = method.parameterList.parameters.joinToString { it.type.canonicalText }
-            "Method: ${method.name}\nParameters: $params"
-        }
 
         return """
-        Generate ${testType.displayName} for this class:
+        Generate ${testType.displayName} for the following Java class:
+
         ${psiClass.text}
         
-        Requirements:
-        - Return ONLY THE CODE INCLUDING THE USED LIB IMPORTS without explanations
-        - Use JUnit 5 and $javaVersion
-        - ${if (testType == TestType.UNIT) "Mock dependencies with Mockito" else "Use @SpringBootTest"}
-        - Scenarios: ${scenarios.joinToString()}
-        - Format as: ```java\n// code here\n```
-    """.trimIndent()
+        ### Requirements:
+        - Return ONLY the code, including necessary IMPORTS, without explanations.
+        - Use JUnit 5 and Java $javaVersion.
+        - ${if (testType == TestType.UNIT) "Mock dependencies with Mockito" else "Use '@SpringBootTest'"}
+        - Cover those scenarios: ${scenarios.joinToString()}
+        - Ensure proper assertions and best practices.
+        - Format the output as:
+          
+          ```java
+          // Generated test code here
+        """.trimIndent()
     }
 
     private fun getProjectJavaVersion(module: Module): String {

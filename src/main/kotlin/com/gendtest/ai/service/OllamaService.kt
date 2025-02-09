@@ -18,10 +18,6 @@ class OllamaService {
     private val client = HttpClient.newHttpClient()
     private val logger = Logger.getInstance(javaClass)
 
-    companion object {
-        private const val MIN_RAM = 8_589_934_592L // 8GB in bytes
-    }
-
     private fun extractCodeFromResponse(response: String): String {
         // Match Java code blocks (```java ... ```)
         val codeBlockRegex = """```java\n(.*?)\n```""".toRegex(RegexOption.DOT_MATCHES_ALL)
@@ -39,7 +35,14 @@ class OllamaService {
         }
     }
 
-    fun generateTest(prompt: String): String {
+    /**
+     * Generates test code based on the provided prompt and model.
+     *
+     * @param prompt The sanitized prompt containing the test generation instructions.
+     * @param model The model identifier to use for the request (default is "codellama:7b").
+     * @return The generated test code as a String.
+     */
+    fun generateTest(prompt: String, model: String = "codellama:7b"): String {
         try {
             // Sanitize prompt to avoid JSON issues
             val sanitizedPrompt = prompt
@@ -47,7 +50,7 @@ class OllamaService {
                 .replace("\\n", "\n")  // Preserve intended newlines
 
             val request = OllamaRequest(
-                model = "codellama:7b",
+                model = model,
                 prompt = sanitizedPrompt,
                 stream = false
             )
@@ -94,7 +97,7 @@ class OllamaService {
         return """
             Try:
             1. Close other applications
-            2. Use a smaller model: ollama pull codellama:7b-q4
+            2. Use a smaller model: ollama pull codellama-7b-q4
             3. Restart Ollama: ollama serve
         """.trimIndent()
     }
