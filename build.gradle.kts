@@ -31,7 +31,7 @@ tasks {
     }
 
     patchPluginXml {
-        sinceBuild.set("241.15989.150")
+        sinceBuild.set("231")
         untilBuild.set("") // No upper limit, works with future versions
     }
 }
