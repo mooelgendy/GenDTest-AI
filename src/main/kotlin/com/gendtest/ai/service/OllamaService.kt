@@ -23,12 +23,11 @@ class OllamaService {
         val codeBlockRegex = """```java\n(.*?)\n```""".toRegex(RegexOption.DOT_MATCHES_ALL)
 
         return codeBlockRegex.find(response)?.let { match ->
-    match.groupValues[1]
-        .trimIndent()
-        .replace("\\n", "\n")
-        .replace("\\\"", "\"")
-} ?: response.trim()  // Just return everything if no code block is found
-        }
+            match.groupValues[1]
+                .trimIndent()
+                .replace("\\n", "\n")
+                .replace("\\\"", "\"")
+        } ?: response.trim()  // Just return everything if no code block is found
     }
 
     /**

@@ -20,9 +20,12 @@ class TestGenerator {
         ${psiClass.text}
         
         ### Requirements:
-        - Return ONLY the code, including necessary IMPORTS, without explanations.
+        - Return **ONLY** the code, including necessary IMPORTS, **without explanations**.
         - Use JUnit 5 and Java $javaVersion.
-        - ${if (testType == TestType.UNIT) "Mock dependencies with Mockito" else "Use '@SpringBootTest'"}
+        ${if (testType == TestType.UNIT) 
+            "- Mock dependencies with Mockito using `@Mock` and `@InjectMocks`. (Do **not** load the Spring context)." 
+        else 
+            "- Use `@SpringBootTest` and `@AutoConfigureMockMvc` and load the Spring application context. Use `MockMvc` to test endpoints."}
         - Cover those scenarios: ${scenarios.joinToString()}
         - Ensure proper assertions and best practices.
         - Format the output as:

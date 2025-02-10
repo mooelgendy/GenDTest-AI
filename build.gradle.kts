@@ -15,7 +15,7 @@ repositories {
 intellij {
     version.set("2024.1.1")
     pluginName.set("GenDTest AI")
-    type.set("IU")
+//    type.set("IU")
     plugins.set(listOf("java", "Kotlin"))
 }
 
