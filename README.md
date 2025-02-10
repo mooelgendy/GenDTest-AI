@@ -170,7 +170,7 @@ Want to improve **GenDTest AI**? Clone the repo and submit a **pull request**! �
 
 ## 🌟 License
 
-MIT License © 2025. Free to use and modify.
+Apache-2.0.
 
 ---
 
