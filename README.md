@@ -1,5 +1,9 @@
 # 🧪 GenDTest AI - IntelliJ Plugin for Generating Unit & Integration Tests with Ollama LLM
 
+![AI-Powered](https://img.shields.io/badge/-AI%20Powered-blue?style=flat-square)
+![Local Execution](https://img.shields.io/badge/-Local%20Execution-green?style=flat-square)
+![Privacy Secure](https://img.shields.io/badge/-Privacy%20Secure-orange?style=flat-square)
+
 ## 📌 Overview
 
 **GenDTest AI** is an **AI-powered IntelliJ plugin** that generates **unit and integration tests** for Java **Spring Boot** projects using **Ollama LLM** locally—without relying on cloud services.

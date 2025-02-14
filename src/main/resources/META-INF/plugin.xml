@@ -3,7 +3,114 @@
     <name>GenDTest AI</name>
     <version>1.0</version>
     <vendor url="http://linkedin.com/in/mooelgendy">Mohamed ElGendy</vendor>
-    <description>An AI-powered plugin to generate unite and integration tests for software development.</description>
+    <description>
+        <![CDATA[
+<b>🧪 GenDTest AI - IntelliJ Plugin for Generating Unit & Integration Tests with Ollama LLM</b><br><br>
+
+<img src="https://img.shields.io/badge/AI-Powered-blue?style=flat-square">
+<img src="https://img.shields.io/badge/Local%20Execution-100%25-green?style=flat-square">
+<img src="https://img.shields.io/badge/Privacy-Secure-orange?style=flat-square"><br><br>
+
+<b>📌 Overview</b><br>
+<b>GenDTest AI</b> is an <b>AI-powered IntelliJ plugin</b> that generates <b>unit and integration tests</b> for Java <b>Spring Boot</b> projects using <b>Ollama LLM</b> locally—without relying on cloud services.<br><br>
+
+<b>🚀 Key Features</b><br>
+✅ <b>One-Click Unit & Integration Test Generation</b> for Java Spring Boot applications.<br>
+✅ <b>Fully Local Execution</b>—No external API calls, ensuring privacy and security.<br>
+✅ <b>Customizable Test Scenarios</b>—Define specific test behaviors.<br>
+✅ <b>Customizable Local AI Model Options</b>—Supports CodeLlama, DeepSeek, and Mistral.<br>
+✅ <b>Popup Notifications for Low Memory Issues</b> with resolution steps.<br>
+✅ <b>Mocking & Exception Handling Support</b>—Generates test cases with <code>@MockBean</code>, exception tests, and more.<br><br>
+
+<b>🔧 Installation & Setup</b><br><br>
+
+<b>1️⃣ Install Ollama Locally</b><br>
+Ollama is required to run the <b>LLM model locally</b> for generating tests.<br><br>
+
+<b>📥 Step 1: Install Ollama</b><br>
+🔍 <b>Windows:</b> Download from <a href="https://ollama.com/download">Ollama's official site</a>.<br>
+🔍 <b>Mac/Linux:</b> Run this command:<br>
+<pre><code>curl -fsSL https://ollama.com/install.sh | sh</code></pre><br>
+
+<b>📥 Step 2: Pull the Required Model</b><br>
+<pre><code>ollama pull codellama:7b</code></pre><br>
+
+<b>📥 Step 3: Start the Ollama Server</b><br>
+<pre><code>ollama serve</code></pre>
+> This starts the Ollama <b>API server</b> at <code>http://localhost:11434/</code>.<br><br>
+
+<b>2️⃣ Install the IntelliJ Plugin</b><br><br>
+
+<b>📥 Option 1: JetBrains Marketplace</b><br>
+1. Open IntelliJ and go to <b>File → Settings → Plugins</b>.<br>
+2. Search for <b>GenDTest AI</b>.<br>
+3. Click Install.<br><br>
+
+<b>📥 Option 2: Manual Installation</b><br>
+1. Download the compiled plugin from <a href="https://github.com/mooelgendy/GenDTest-AI/releases">Releases</a>.<br>
+2. Open IntelliJ and go to <b>File → Settings → Plugins</b>.<br>
+3. Click <b>⚙️ (Settings) → Install Plugin from Disk...</b>.<br>
+4. Select the downloaded file and install.<br>
+5. Restart IntelliJ.<br><br>
+
+<b>🚀 How to Use GenDTest AI</b><br><br>
+
+<b>1️⃣ Open Any Java Spring Boot Project in IntelliJ</b><br>
+✔️ Ensure your project has <b>JUnit 5</b> installed.<br><br>
+
+<b>2️⃣ Generate Tests for a Class</b><br>
+1. Open a Java class.<br>
+2. Select <b>"Generate Tests with GenDTest AI"</b> from the IntelliJ <b>Code</b> menu.<br>
+3. Choose <b>Unit test</b> or <b>Integration test</b>.<br>
+4. The plugin will use <b>Ollama</b> to generate the test cases inside <code>src/test/java/</code>.<br><br>
+
+<b>3️⃣ Customize Test Scenarios</b><br>
+Modify the <b>plugin settings</b> to define custom test behaviors.<br><br>
+
+<b>4️⃣ Customize Local AI Model</b><br>
+Supports:<br>
+• <b>Codellama:7B</b><br>
+• <b>Codellama:13B</b><br>
+• <b>Deepseek-coder:6.7B</b><br><br>
+
+<b>🛠 Troubleshooting</b><br><br>
+
+<b>1️⃣ Plugin Not Showing in IntelliJ?</b><br>
+✔️ Ensure the plugin is installed in <b>File → Settings → Plugins</b>.<br>
+✔️ Restart IntelliJ after installing.<br><br>
+
+<b>2️⃣ Ollama Not Responding?</b><br>
+✔️ Run <code>ollama serve</code> to start the API server.<br>
+✔️ Test with <code>curl http://localhost:11434/api/generate</code>.<br><br>
+
+<b>3️⃣ Gradle Build Issues?</b><br>
+✔️ Run: <code>./gradlew build --refresh-dependencies</code>.<br>
+✔️ Ensure <b>JUnit 5</b> is installed in <code>build.gradle.kts</code>:<br>
+<pre><code>dependencies {
+    testImplementation("org.junit.jupiter:junit-jupiter:5.9.2")
+}</code></pre><br>
+
+<b>📚 Technologies & Tools Used</b><br>
+• <b>Java 17+</b>, <b>Spring Boot</b>, <b>JUnit 5</b>, <b>Gradle</b><br>
+• <b>Ollama LLM</b> for test generation<br>
+• <b>IntelliJ Platform SDK</b> for plugin development<br><br>
+
+<b>🤝 Contributing</b><br>
+Want to improve <b>GenDTest AI</b>? Submit a pull request! 🚀<br>
+<pre><code>git clone https://github.com/mooelgendy/GenDTest-AI.git
+git add .
+git commit -m "Enhance test generation feature"
+git push</code></pre><br>
+
+<b>🌟 License</b><br>
+Apache-2.0.<br><br>
+
+<b>🌎 Connect with Me</b><br>
+🔗 <a href="https://linkedin.com/in/mooelgendy">LinkedIn: Mohamed ElGendy</a>
+    ]]>
+    </description>
+
+
 
     <actions>
         <action id="OllamaTestGen"
